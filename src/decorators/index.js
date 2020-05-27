@@ -1,6 +1,7 @@
-import {ProxyHOC} from './base-hoc';
+import {ProxyHOC, InheritHOC} from './base-hoc';
 
 export {
-    ProxyHOC
+    ProxyHOC,
+    InheritHOC
 };
 
