@@ -1,9 +1,11 @@
-import React from 'react';
-// import PropTypes from 'prop-types';
-import {ProxyHOC} from '../decorators';
+import React, {Component} from 'react';
+import {ProxyHOC, InheritHOC} from '../decorators';
 
 @ProxyHOC('Hello Title')
-export class SimpleProxy extends React.Component {
+export class SimpleProxy extends Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
             <div>Proxy Simple Case</div>
@@ -11,15 +13,11 @@ export class SimpleProxy extends React.Component {
     }
 }
 
-// SimpleProxy.propTypes = {
-//     // accessibility: PropTypes.bool,
-// };
-//
-// @InheritHOC()
-// export class SimpleInherit extends React.Component {
-//     render() {
-//         return (
-//             <div>Inherit Simple Case</div>
-//         );
-//     }
-// }
+@InheritHOC
+export class SimpleInherit extends Component {
+    render() {
+        return (
+            <div>Inherit Simple Case</div>
+        );
+    }
+}

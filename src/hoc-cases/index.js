@@ -1,6 +1,7 @@
-import {SimpleProxy} from './simple';
+import {SimpleProxy, SimpleInherit} from './simple';
 
 export {
     SimpleProxy,
+    SimpleInherit
 };
 
