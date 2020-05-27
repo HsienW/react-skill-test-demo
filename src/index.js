@@ -1,11 +1,13 @@
 import React from 'react';
 import {render} from 'react-dom';
-import {SimpleProxy} from './hoc-cases';
-import {SimpleInherit} from './hoc-cases';
+import {SimpleProxyCase} from './hoc-cases';
+import {SimpleInheritCase} from './hoc-cases';
+import {StyleCase} from './hoc-cases';
 
 render(
     <div>
-        <SimpleProxy/>
-        <SimpleInherit/>
+        <SimpleProxyCase/>
+        <SimpleInheritCase/>
+        <StyleCase title={'Test title'}/>
     </div>, document.getElementById('app')
 );

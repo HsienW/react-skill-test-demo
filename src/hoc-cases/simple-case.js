@@ -2,10 +2,7 @@ import React, {Component} from 'react';
 import {ProxyHOC, InheritHOC} from '../decorators';
 
 @ProxyHOC('Hello Title')
-export class SimpleProxy extends Component {
-    constructor(props) {
-        super(props);
-    }
+export class SimpleProxyCase extends Component {
     render() {
         return (
             <div>Proxy Simple Case</div>
@@ -14,7 +11,7 @@ export class SimpleProxy extends Component {
 }
 
 @InheritHOC
-export class SimpleInherit extends Component {
+export class SimpleInheritCase extends Component {
     render() {
         return (
             <div>Inherit Simple Case</div>

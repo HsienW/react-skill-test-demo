@@ -1,7 +1,9 @@
-import {SimpleProxy, SimpleInherit} from './simple';
+import {SimpleProxyCase, SimpleInheritCase} from './simple-case';
+import {StyleCase} from './style-case';
 
 export {
-    SimpleProxy,
-    SimpleInherit
+    SimpleProxyCase,
+    SimpleInheritCase,
+    StyleCase
 };
 
