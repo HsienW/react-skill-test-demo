@@ -1,7 +1,8 @@
 import React from 'react';
 import {render} from 'react-dom';
-import {Main} from './containers/main';
+import {SimpleProxy} from './hoc-cases';
+// import {SimpleInherit} from './hoc-cases';
 
 render(
-    <Main />, document.getElementById('app')
+    <SimpleProxy />, document.getElementById('app')
 );
