@@ -18,18 +18,13 @@ export class RefCase extends Component {
 @RefButtonHOC
 export class RefButtonCase extends Component {
 
-    constructor() {
-        super();
-        this.buttonRef = React.createRef();
-    }
-
     buttonLog = () => {
         console.log('Ref button case log');
     };
 
     render() {
         return (
-            <button onClick={this.buttonLog} ref={this.buttonRef}>
+            <button onClick={this.buttonLog}>
                 Ref button case
             </button>
         );
