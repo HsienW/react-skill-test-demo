@@ -29,3 +29,15 @@ export const proxyControlStateHOC = (WrappedComponent) => {
         }
     };
 };
+
+export const inheritControlStateHOC = (WrappedComponent) => {
+    return class InheritControlStateHOC extends WrappedComponent {
+        render() {
+            console.log('props', this.props);
+            console.log('state', this.state);
+            return (
+                <div>{super.render()}</div>
+            );
+        }
+    };
+};

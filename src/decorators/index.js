@@ -3,7 +3,7 @@ import {styleHOC} from './style-hoc';
 import {conditionHOC} from './condition-hoc';
 import {handlePropsHOC} from './handle-props-hoc';
 import {refHOC, refButtonHOC} from './ref-hoc';
-import {proxyControlStateHOC} from './control-state-hoc';
+import {proxyControlStateHOC, inheritControlStateHOC} from './control-state-hoc';
 
 export {
     proxyHOC,
@@ -13,6 +13,7 @@ export {
     handlePropsHOC,
     refHOC,
     refButtonHOC,
-    proxyControlStateHOC
+    proxyControlStateHOC,
+    inheritControlStateHOC
 };
 
