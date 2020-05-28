@@ -6,7 +6,8 @@ import {StyleCase} from './hoc-cases';
 import {ConditionCase} from './hoc-cases';
 import {HandlePropsCase} from './hoc-cases';
 import {RefCase, RefButtonCase} from './hoc-cases';
-import {ProxyControlStateHOCCase, InheritControlStateHOCCase} from './hoc-cases';
+import {ProxyControlStateCase, InheritControlStateCase} from './hoc-cases';
+import {LogCase} from './hoc-cases';
 
 render(
     <div>
@@ -17,7 +18,8 @@ render(
         <HandlePropsCase/>
         <RefCase/>
         <RefButtonCase/>
-        <ProxyControlStateHOCCase/>
-        <InheritControlStateHOCCase checkProps={'I am props value'}/>
+        <ProxyControlStateCase/>
+        <InheritControlStateCase checkProps={'I am props value'}/>
+        <LogCase/>
     </div>, document.getElementById('app')
 );

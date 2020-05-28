@@ -4,6 +4,7 @@ import {conditionHOC} from './condition-hoc';
 import {handlePropsHOC} from './handle-props-hoc';
 import {refHOC, refButtonHOC} from './ref-hoc';
 import {proxyControlStateHOC, inheritControlStateHOC} from './control-state-hoc';
+import {logHOC} from './log-hoc';
 
 export {
     proxyHOC,
@@ -14,6 +15,7 @@ export {
     refHOC,
     refButtonHOC,
     proxyControlStateHOC,
-    inheritControlStateHOC
+    inheritControlStateHOC,
+    logHOC
 };
 
