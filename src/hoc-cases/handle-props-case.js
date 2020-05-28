@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {HandlePropsHOC} from '../decorators';
+import {handlePropsHOC} from '../decorators';
 
-@HandlePropsHOC('I am new props')
+@handlePropsHOC('I am new props')
 export class HandlePropsCase extends Component {
     render() {
         const {newPropValue} = {...this.props};

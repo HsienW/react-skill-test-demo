@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
-export const ProxyHOC = (displayTitle) => (WrappedComponent) => {
-    return class proxyHOC extends Component {
+export const proxyHOC = (displayTitle) => (WrappedComponent) => {
+    return class ProxyHOC extends Component {
         render() {
             return (
                 <React.Fragment>
@@ -13,8 +13,8 @@ export const ProxyHOC = (displayTitle) => (WrappedComponent) => {
     };
 };
 
-export const InheritHOC = (WrappedComponent) => {
-    return class inheritHOC extends WrappedComponent {
+export const inheritHOC = (WrappedComponent) => {
+    return class InheritHOC extends WrappedComponent {
         render() {
             return (
                 <React.Fragment>

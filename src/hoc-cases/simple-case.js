@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {ProxyHOC, InheritHOC} from '../decorators';
+import {proxyHOC, inheritHOC} from '../decorators';
 
-@ProxyHOC('Hello Title')
+@proxyHOC('Hello Title')
 export class SimpleProxyCase extends Component {
     render() {
         return (
@@ -10,7 +10,7 @@ export class SimpleProxyCase extends Component {
     }
 }
 
-@InheritHOC
+@inheritHOC
 export class SimpleInheritCase extends Component {
     render() {
         return (
