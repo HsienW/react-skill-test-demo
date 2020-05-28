@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {StyleHOC} from '../decorators';
+import {styleHOC} from '../decorators';
 import './hoc-cases-style.css';
 
-@StyleHOC('title')
+@styleHOC('title')
 export class StyleCase extends Component {
     render() {
         return (

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {RefHOC, RefButtonHOC} from '../decorators';
+import {refHOC, refButtonHOC} from '../decorators';
 
-@RefHOC
+@refHOC
 export class RefCase extends Component {
 
     handelLog() {
@@ -15,7 +15,7 @@ export class RefCase extends Component {
     }
 }
 
-@RefButtonHOC
+@refButtonHOC
 export class RefButtonCase extends Component {
 
     buttonLog = () => {

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
-export const ConditionHOC = (WrappedComponent) => {
-    return class conditionHOC extends Component {
+export const conditionHOC = (WrappedComponent) => {
+    return class ConditionHOC extends Component {
         render() {
             const {showComponent} = {...this.props};
             if (!showComponent) {

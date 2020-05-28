@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {ConditionHOC} from '../decorators';
+import {conditionHOC} from '../decorators';
 
-@ConditionHOC
+@conditionHOC
 export class ConditionCase extends Component {
     render() {
         return (

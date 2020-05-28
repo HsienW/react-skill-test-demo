@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
-export const RefHOC = (WrappedComponent) => {
-    return class refHOC extends Component {
+export const refHOC = (WrappedComponent) => {
+    return class RefHOC extends Component {
 
         componentDidMount() {
             this.wrappedRef.handelLog();
@@ -21,8 +21,8 @@ export const RefHOC = (WrappedComponent) => {
 };
 
 // todo this HOC should fix to
-export const RefButtonHOC = (WrappedComponent) => {
-    class refButtonHOC extends Component {
+export const refButtonHOC = (WrappedComponent) => {
+    class RefButtonHOC extends Component {
         render() {
             const {forwardedRef, ...props} = {...this.props};
             return <WrappedComponent ref={forwardedRef} {...props} />;
@@ -30,6 +30,6 @@ export const RefButtonHOC = (WrappedComponent) => {
     }
 
     return React.forwardRef((props, ref) => {
-        return <refButtonHOC forwardedRef={ref} {...props}/>;
+        return <RefButtonHOC forwardedRef={ref} {...props}/>;
     });
 };

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
-export const StyleHOC = (className) => (WrappedComponent) => {
-    return class styleHOC extends Component {
+export const styleHOC = (className) => (WrappedComponent) => {
+    return class StyleHOC extends Component {
         render() {
             const {title} = {...this.props};
             return (

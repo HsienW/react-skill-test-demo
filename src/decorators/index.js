@@ -1,16 +1,16 @@
-import {ProxyHOC, InheritHOC} from './base-hoc';
-import {StyleHOC} from './style-hoc';
-import {ConditionHOC} from './condition-hoc';
-import {HandlePropsHOC} from './handle-props-hoc';
-import {RefHOC, RefButtonHOC} from './ref-hoc';
+import {proxyHOC, inheritHOC} from './base-hoc';
+import {styleHOC} from './style-hoc';
+import {conditionHOC} from './condition-hoc';
+import {handlePropsHOC} from './handle-props-hoc';
+import {refHOC, refButtonHOC} from './ref-hoc';
 
 export {
-    ProxyHOC,
-    InheritHOC,
-    StyleHOC,
-    ConditionHOC,
-    HandlePropsHOC,
-    RefHOC,
-    RefButtonHOC
+    proxyHOC,
+    inheritHOC,
+    styleHOC,
+    conditionHOC,
+    handlePropsHOC,
+    refHOC,
+    refButtonHOC
 };
 
