@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {proxyControlStateHOC, inheritControlStateHOC} from '../decorators';
 
 @proxyControlStateHOC
-export class ProxyControlStateHOCCase extends Component {
+export class ProxyControlStateCase extends Component {
     render() {
         return (
             <React.Fragment>
@@ -14,7 +14,7 @@ export class ProxyControlStateHOCCase extends Component {
 }
 
 @inheritControlStateHOC
-export class InheritControlStateHOCCase extends Component {
+export class InheritControlStateCase extends Component {
 
     constructor(props) {
         super(props);
