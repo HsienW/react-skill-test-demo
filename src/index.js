@@ -5,7 +5,7 @@ import {SimpleInheritCase} from './hoc-cases';
 import {StyleCase} from './hoc-cases';
 import {ConditionCase} from './hoc-cases';
 import {HandlePropsCase} from './hoc-cases';
-import {RefCase} from './hoc-cases';
+import {RefCase, RefButtonCase} from './hoc-cases';
 
 render(
     <div>
@@ -15,5 +15,6 @@ render(
         <ConditionCase showComponent={true}/>
         <HandlePropsCase/>
         <RefCase/>
+        <RefButtonCase />
     </div>, document.getElementById('app')
 );
