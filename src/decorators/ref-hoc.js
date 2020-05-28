@@ -20,20 +20,16 @@ export const RefHOC = (WrappedComponent) => {
     };
 };
 
+// todo this HOC should fix to
 export const RefButtonHOC = (WrappedComponent) => {
     class refButtonHOC extends Component {
-
-        // componentDidMount() {
-        //     this.ref.buttonLog();
-        // }
-
         render() {
-            const {forwardedRef} = {...this.props};
-            return <WrappedComponent ref={forwardedRef} />;
+            const {forwardedRef, ...props} = {...this.props};
+            return <WrappedComponent ref={forwardedRef} {...props} />;
         }
     }
 
     return React.forwardRef((props, ref) => {
-        return <refButtonHOC {...props} forwardedRef={ref}/>;
+        return <refButtonHOC forwardedRef={ref} {...props}/>;
     });
 };
