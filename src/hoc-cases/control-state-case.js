@@ -1,14 +1,31 @@
 import React, {Component} from 'react';
-import {proxyControlStateHOC} from '../decorators';
+import {proxyControlStateHOC, inheritControlStateHOC} from '../decorators';
 
 @proxyControlStateHOC
-export class ControlStateHOCCase extends Component {
+export class ProxyControlStateHOCCase extends Component {
     render() {
         return (
             <React.Fragment>
-                <div>Control State Case</div>
+                <div>Proxy Control State Case</div>
                 <input {...this.props}/>
             </React.Fragment>
+        );
+    }
+}
+
+@inheritControlStateHOC
+export class InheritControlStateHOCCase extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            checkState: 'I am state value'
+        };
+    }
+
+    render() {
+        return (
+            <div>Inherit Control State Case</div>
         );
     }
 }
