@@ -2,7 +2,7 @@ import {SimpleProxyCase, SimpleInheritCase} from './simple-case';
 import {StyleCase} from './style-case';
 import {ConditionCase} from './condition-case';
 import {HandlePropsCase} from './handle-props-case';
-import {RefCase} from './ref-case';
+import {RefCase, RefButtonCase} from './ref-case';
 
 export {
     SimpleProxyCase,
@@ -10,6 +10,7 @@ export {
     StyleCase,
     ConditionCase,
     HandlePropsCase,
-    RefCase
+    RefCase,
+    RefButtonCase
 };
 
