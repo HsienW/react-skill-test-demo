@@ -8,6 +8,7 @@ import {HandlePropsCase} from './hoc-cases';
 import {RefCase, RefButtonCase} from './hoc-cases';
 import {ProxyControlStateCase, InheritControlStateCase} from './hoc-cases';
 import {LogCase} from './hoc-cases';
+import {TwoWayBindingCase} from './hoc-cases';
 
 render(
     <div>
@@ -21,5 +22,6 @@ render(
         <ProxyControlStateCase/>
         <InheritControlStateCase checkProps={'I am props value'}/>
         <LogCase/>
+        <TwoWayBindingCase/>
     </div>, document.getElementById('app')
 );
