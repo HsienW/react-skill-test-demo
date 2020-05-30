@@ -7,8 +7,9 @@ export const logHOC = (WrappedComponent) => {
             console.log(`我的 render 時間是: ${this.start}`);
         }
 
-
         render() {
+            console.log('[[[[[[[');
+            console.log(WrappedComponent);
             return (
                 <WrappedComponent {...this.props}/>
             );

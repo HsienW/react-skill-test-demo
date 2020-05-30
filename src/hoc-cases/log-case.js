@@ -3,9 +3,12 @@ import {logHOC} from '../decorators';
 
 @logHOC
 export class LogCase extends Component {
+
     render() {
         return (
-            <div>Log Case</div>
+            <React.Fragment>
+                <div>Log Case</div>
+            </React.Fragment>
         );
     }
 }
