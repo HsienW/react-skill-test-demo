@@ -5,6 +5,7 @@ import {HandlePropsCase} from './handle-props-case';
 import {RefCase, RefButtonCase} from './ref-case';
 import {ProxyControlStateCase, InheritControlStateCase} from './control-state-case';
 import {LogCase} from './log-case';
+import {TwoWayBindingCase} from './two-way-binding-case';
 
 export {
     SimpleProxyCase,
@@ -16,6 +17,7 @@ export {
     RefButtonCase,
     ProxyControlStateCase,
     InheritControlStateCase,
-    LogCase
+    LogCase,
+    TwoWayBindingCase
 };
 

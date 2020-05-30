@@ -5,6 +5,7 @@ import {handlePropsHOC} from './handle-props-hoc';
 import {refHOC, refButtonHOC} from './ref-hoc';
 import {proxyControlStateHOC, inheritControlStateHOC} from './control-state-hoc';
 import {logHOC} from './log-hoc';
+import {twoWayBindingHOC} from './two-way-binding-hoc';
 
 export {
     proxyHOC,
@@ -16,6 +17,7 @@ export {
     refButtonHOC,
     proxyControlStateHOC,
     inheritControlStateHOC,
-    logHOC
+    logHOC,
+    twoWayBindingHOC
 };
 
