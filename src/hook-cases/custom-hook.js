@@ -1,20 +1,14 @@
 import React, {useState, useEffect} from 'react';
-import {fakeApiOne, fakeApiTwo} from '../utils/fake-api';
+import {fakeApiOne} from '../utils/fake-api';
 
 const useToken = (request) => {
-    const [userToken, setCurrentToken] = useState(null);
+    const [userToken, setNewToken] = useState(null);
 
     useEffect(() => {
-        function handleTokenChange(status) {
-            console.log(status);
-            setCurrentToken(status.userToken);
-        }
-
-        fakeApiOne(request, handleTokenChange);
-        return () => {
-            fakeApiTwo(request, handleTokenChange);
-        };
-    });
+        fakeApiOne(request).then((respond) => {
+            setNewToken(respond);
+        });
+    }, []);
 
     return userToken;
 };
