@@ -1,5 +1,7 @@
-import CustomHookCase from './custom-hook';
+import TokenCustomHookCase from './token-custom-hook';
+import LogCustomHookCase from './log-custom-hook';
 
 export {
-    CustomHookCase,
+    TokenCustomHookCase,
+    LogCustomHookCase
 };
