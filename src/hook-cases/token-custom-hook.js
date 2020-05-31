@@ -8,12 +8,12 @@ const useToken = (request) => {
         fakeApiOne(request).then((respond) => {
             setNewToken(respond);
         });
-    }, []);
+    }, [request]);
 
     return userToken;
 };
 
-const CustomHookCase = () => {
+const TokenCustomHookCase = () => {
     const request = {user: '123', passWord: '456'};
     const isGetToken = useToken(request);
 
@@ -25,5 +25,5 @@ const CustomHookCase = () => {
     );
 };
 
-export default CustomHookCase;
+export default TokenCustomHookCase;
 
