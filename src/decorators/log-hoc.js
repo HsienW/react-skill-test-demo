@@ -8,8 +8,6 @@ export const logHOC = (WrappedComponent) => {
         }
 
         render() {
-            console.log('[[[[[[[');
-            console.log(WrappedComponent);
             return (
                 <WrappedComponent {...this.props}/>
             );

@@ -9,12 +9,12 @@ import {render} from 'react-dom';
 // import {ProxyControlStateCase, InheritControlStateCase} from './hoc-cases';
 // import {LogCase} from './hoc-cases';
 // import {TwoWayBindingCase} from './hoc-cases';
-import {TokenCustomHookCase} from './hook-cases';
-import {LogCustomHookCase} from './hook-cases';
+// import {TokenCustomHookCase} from './hook-cases';
+// import {LogCustomHookCase} from './hook-cases';
+import {InitCustomHookCase} from './hook-cases';
 
 render(
     <div>
-        <TokenCustomHookCase/>
-        <LogCustomHookCase/>
+        <InitCustomHookCase/>
     </div>, document.getElementById('app')
 );
