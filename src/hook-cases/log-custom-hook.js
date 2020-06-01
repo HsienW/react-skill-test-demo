@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 
 const useLog = (eventTime) => {
     const [isLog] = useState(null);
@@ -10,7 +10,7 @@ const useLog = (eventTime) => {
     return isLog;
 };
 
-const LogCustomHookCase = () => {
+export const LogCustomHookCase = () => {
     const [triggerTime, setTriggerTime] = useState(null);
     useLog(triggerTime);
 
@@ -28,5 +28,28 @@ const LogCustomHookCase = () => {
     );
 };
 
-export default LogCustomHookCase;
+// 是否為第一次 load
+const useInitLog = (props) => {
+    const init = useRef(true);
+    useEffect(() => {
+        if (init.current) {
+            init.current = false;
+            console.log('this time is initial');
+        } else {
+            console.log('not is initial');
+        }
+    }, [props]);
+};
+
+export const InitCustomHookCase = (props) => {
+    // const handleLog = () => {
+    //     console.log('not is initial');
+    // };
+
+    useInitLog(props);
+    return (
+        <div>Init Custom Hook Case</div>
+    );
+};
+
 

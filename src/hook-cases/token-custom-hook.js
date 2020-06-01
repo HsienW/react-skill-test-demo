@@ -13,7 +13,7 @@ const useToken = (request) => {
     return userToken;
 };
 
-const TokenCustomHookCase = () => {
+export const TokenCustomHookCase = () => {
     const request = {user: '123', passWord: '456'};
     const isGetToken = useToken(request);
 
@@ -24,6 +24,3 @@ const TokenCustomHookCase = () => {
         <div>Get Token Success - Custom Hook Case </div>
     );
 };
-
-export default TokenCustomHookCase;
-
