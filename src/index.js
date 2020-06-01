@@ -11,10 +11,11 @@ import {render} from 'react-dom';
 // import {TwoWayBindingCase} from './hoc-cases';
 // import {TokenCustomHookCase} from './hook-cases';
 // import {LogCustomHookCase} from './hook-cases';
-import {InitCustomHookCase} from './hook-cases';
+// import {InitCustomHookCase} from './hook-cases';
+import {CounterPropsCase} from './render-props-cases';
 
 render(
     <div>
-        <InitCustomHookCase/>
+        <CounterPropsCase/>
     </div>, document.getElementById('app')
 );
