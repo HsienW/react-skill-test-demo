@@ -12,10 +12,11 @@ import {render} from 'react-dom';
 // import {TokenCustomHookCase} from './hook-cases';
 // import {LogCustomHookCase} from './hook-cases';
 // import {InitCustomHookCase} from './hook-cases';
-import {CounterPropsCase} from './render-props-cases';
+// import {CounterPropsCase} from './render-props-cases';
+import {FetchDataPropsCase} from './render-props-cases';
 
 render(
     <div>
-        <CounterPropsCase/>
+        <FetchDataPropsCase/>
     </div>, document.getElementById('app')
 );

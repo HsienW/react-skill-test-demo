@@ -1,4 +1,5 @@
-export const fakeApiOne = () => {
+export const fakeObjApi = (request) => {
+    console.log(request);
     return new Promise((resolve, reject) => {
         const success = true;
         if (success) {
@@ -13,14 +14,22 @@ export const fakeApiOne = () => {
     });
 };
 
-export const fakeApiTwo = () => {
+export const fakeArrayApi = (request) => {
+    console.log(request);
     return new Promise((resolve, reject) => {
         const success = true;
         if (success) {
             setTimeout(() => {
-                resolve({
-                    message: 'sign out done'
-                });
+                resolve([
+                    {
+                        id: 1,
+                        name: '123'
+                    },
+                    {
+                        id: 2,
+                        name: '456'
+                    },
+                ]);
             }, 500);
         } else {
             reject([]);
