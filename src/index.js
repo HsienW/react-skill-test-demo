@@ -14,9 +14,11 @@ import {render} from 'react-dom';
 // import {InitCustomHookCase} from './hook-cases';
 // import {CounterPropsCase} from './render-props-cases';
 import {FetchDataPropsCase} from './render-props-cases';
+import {MultipleFetchDataPropsCase} from './render-props-cases';
 
 render(
     <div>
         <FetchDataPropsCase/>
+        <MultipleFetchDataPropsCase/>
     </div>, document.getElementById('app')
 );

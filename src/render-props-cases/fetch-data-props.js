@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {fakeArrayApi} from '../utils/fake-api';
+import {fakeUserArrayApi, fakeTodoArrayApi} from '../utils/fake-api';
 
 class FetchDataWrapper extends Component {
     state = {
@@ -9,8 +9,8 @@ class FetchDataWrapper extends Component {
     };
 
     fetchData() {
-        const {requestURL} = {...this.props};
-        fakeArrayApi(requestURL)
+        const {requestObj, renderApi} = {...this.props};
+        renderApi(requestObj)
             .then((response) => {
                 this.setState({
                     list: response,
@@ -41,10 +41,14 @@ export class FetchDataPropsCase extends Component {
     render() {
         return (
             <FetchDataWrapper
-                requestURL="https://test"
+                requestObj={{
+                    url: 'https://test',
+                    token: '12345678'
+                }}
+                renderApi={fakeUserArrayApi}
                 render={({list, isLoading, error}) => (
                     <React.Fragment>
-                        <h2>Random Users</h2>
+                        <h2>Fetch Data Props Case</h2>
                         {
                             error ? <p>{error.message}</p> : null
                         }
@@ -59,3 +63,68 @@ export class FetchDataPropsCase extends Component {
         );
     }
 }
+
+const UserList = (props) => {
+    const {title, requestObj} = {...props};
+    return (
+        <FetchDataWrapper
+            requestObj={requestObj}
+            renderApi={fakeUserArrayApi}
+            render={({list, isLoading, error}) => (
+                <React.Fragment>
+                    {
+                        <h2>{title}</h2>
+                    }
+                    {
+                        error ? <p>{error.message}</p> : null
+                    }
+                    {
+                        isLoading
+                            ? <h2>Loading...</h2>
+                            : <ul>{list.map(item => <li key={item.id}>{item.name}</li>)}</ul>
+                    }
+                </React.Fragment>
+            )}
+        />
+    );
+};
+
+const TodoList = (props) => {
+    const {title, requestObj} = {...props};
+    return (
+        <FetchDataWrapper
+            requestObj={requestObj}
+            renderApi={fakeTodoArrayApi}
+            render={({list, isLoading, error}) => (
+                <React.Fragment>
+                    {
+                        <h2>{title}</h2>
+                    }
+                    {
+                        error ? <p>{error.message}</p> : null
+                    }
+                    {
+                        isLoading
+                            ? <h2>Loading...</h2>
+                            : <ul>{list.map(item => <li key={item.id}>{item.todoItem}</li>)}</ul>
+                    }
+                </React.Fragment>
+            )}
+        />
+    );
+};
+
+export const MultipleFetchDataPropsCase = () => {
+    return (
+        <React.Fragment>
+            <UserList
+                title={'User List'}
+                requestObj={{url: 'https://test', token: '12345678'}}
+            />
+            <TodoList
+                title={'Todo List'}
+                requestObj={{url: 'https://test', token: '12345678'}}
+            />
+        </React.Fragment>
+    );
+};
