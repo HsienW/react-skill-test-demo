@@ -14,7 +14,7 @@ export const fakeObjApi = (request) => {
     });
 };
 
-export const fakeArrayApi = (request) => {
+export const fakeUserArrayApi = (request) => {
     console.log(request);
     return new Promise((resolve, reject) => {
         const success = true;
@@ -37,3 +37,25 @@ export const fakeArrayApi = (request) => {
     });
 };
 
+export const fakeTodoArrayApi = (request) => {
+    console.log(request);
+    return new Promise((resolve, reject) => {
+        const success = true;
+        if (success) {
+            setTimeout(() => {
+                resolve([
+                    {
+                        id: 1,
+                        todoItem: 'Edit'
+                    },
+                    {
+                        id: 2,
+                        todoItem: 'Remove'
+                    },
+                ]);
+            }, 500);
+        } else {
+            reject([]);
+        }
+    });
+};
