@@ -22,32 +22,30 @@ class CounterWrapper extends Component {
         const {render} = {...this.props};
 
         return (
-            <div>
+            <React.Fragment>
                 {render({
                     increment: this.increment,
                     decrement: this.decrement,
                     count: count
                 })}
-            </div>
+            </React.Fragment>
         );
     }
 }
 
-export class CounterPropsCase extends React.Component {
+export class CounterPropsCase extends Component {
     render() {
         return (
             <CounterWrapper
                 render={({increment, decrement, count}) => (
-                    <div>
-                        <div>
-                            <h3>Render Props Counter</h3>
-                        </div>
+                    <React.Fragment>
+                        <h3>Render Props Counter</h3>
                         <div>
                             <p>{count}</p>
                             <button onClick={() => increment()}>Increment</button>
                             <button onClick={() => decrement()}>Decrement</button>
                         </div>
-                    </div>
+                    </React.Fragment>
                 )}
             />
         );
